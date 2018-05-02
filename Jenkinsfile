@@ -16,6 +16,7 @@ pipeline {
     }
     stage('Test') {
       steps {
+        git(url: 'https://github.com/lbrandis/TestingBlueOcean', branch: 'master', credentialsId: 'Git')
         sh 'mvn test'
       }
     }
