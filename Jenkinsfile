@@ -11,7 +11,7 @@ pipeline {
       }
       steps {
         git(branch: 'master', url: 'https://github.com/lbrandis/TestingBlueOcean', credentialsId: 'Git')
-        sh 'mvn clean'
+        sh 'mvn clean install -DskipTests'
       }
     }
   }
